@@ -5,18 +5,18 @@
 
 int main(){
 int num_a,num_b;
-printf("the number");
+printf("the numbers");
 scanf("%d%d", &num_a, &num_b);
 
 
 
 printf("The Armstrong numbers are:");
-    for(int i = num_a; i<=num_b; i++ )
+    for(int i=num_a;i<=num_b; i++ )
     {
 
         if (isArmstrong(i))
         {
-            printf(" %d" ,i);
+            printf(" %d",i);
         }
         
         
@@ -40,7 +40,7 @@ printf("\nThe Palindromes are:");
     {   
         if (isPalindrome(i)==1)
         {
-           printf(" %d" ,i);
+           printf(" %d",i);
         }
     }
         
@@ -50,7 +50,7 @@ printf("\nThe Strong numbers are:");
         {  
             if (isStrong(i)==1)
             {
-            printf("%d " ,i);
+            printf("%d ",i);
             }
         }
     

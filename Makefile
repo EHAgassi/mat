@@ -28,7 +28,7 @@ mains: $(OBJECTS_MAIN) libclassrec.a
 	$(CC) $(FLAGS) -o mains $(OBJECTS_MAIN) libclassrec.a -lm
 #  what is the instructions?^^^^ 
 
-maindloop: $(OBJECTS_MAIN) #/// depand on other?/////////////
+maindloop: $(OBJECTS_MAIN) libclassloops.so
 	$(CC) $(FLAGS) -o maindloop $(OBJECTS_MAIN) ./libclassloops.so  -lm 
 
 maindrec: $(OBJECTS_MAIN) libclassrec.so 
@@ -45,8 +45,8 @@ advancedClassificationLoop.o: $(OBJECTS_CLASS) advancedClassificationLoop.c
 	$(CC) $(FLAGS) -c advancedClassificationLoop.c -lm
 advancedClassificationRecursion.o: $(OBJECTS_CLASS) advancedClassificationRecursion.c
 	$(CC) $(FLAGS) -c advancedClassificationRecursion.c -lm
-main.o:$(OBJECTS_CLASS) 
-	$(CC) $(FLAGS) -c main.c -lm
+main.o:$(OBJECTS_CLASS) main.c 
+	$(CC) $(FLAGS) -c main.c 
 
 .PHONY: clean all
 
