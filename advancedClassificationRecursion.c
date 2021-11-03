@@ -38,8 +38,7 @@ int numDigit(int num)
 int isPalindrome(int num)
 {
     int nDigit = numDigit(num); 
-    if(nDigit==1 || nDigit==0)
-    {
+    if(nDigit==1 || nDigit==0){
         return 1;
     }
     double firstCh = (num / pow(10 ,nDigit-1));
