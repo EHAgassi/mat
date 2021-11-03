@@ -4,46 +4,49 @@
 
 
 int main(){
-int num_a,num_b, i;
+int num_a,num_b;
+printf("the number");
+scanf("%d%d", &num_a, &num_b);
 
-scanf("first: %d",&num_a);
-scanf("%d", &num_b);
 
 
-printf("The Armstrong numbers are: ");
-    for(i = num_a; i<=num_b; i++ )
+printf("The Armstrong numbers are:");
+    for(int i = num_a; i<=num_b; i++ )
     {
-        if (isArmstrong(i) == 1)
+
+        if (isArmstrong(i))
         {
-            printf("%d " ,i);
+            printf(" %d" ,i);
         }
         
         
     } 
+   
     
-printf("/nThe Prime numbers are: ");
-        for(i = num_a; i<=num_b; i++ )
+printf("\nThe Prime numbers are:");
+        for(int i = num_a; i<=num_b; i++ )
     {   
+       
         if (isPrime(i)==1)
         {
-           printf("%d " ,i);
+           printf(" %d" ,i);
         }
         
         
     }
 
-printf("/nThe Palindromes are: ");
-        for(i = num_a; i<=num_b; i++ )
+printf("\nThe Palindromes are:");
+        for(int i = num_a; i<=num_b; i++ )
     {   
         if (isPalindrome(i)==1)
         {
-           printf("%d " ,i);
+           printf(" %d" ,i);
         }
     }
         
         
-printf("/nThe Strong numbers are: ");
-    for(i = num_a; i<=num_b; i++ )
+printf("\nThe Strong numbers are:");
+    for(int i = num_a; i<=num_b; i++ )
         {  
             if (isStrong(i)==1)
             {
