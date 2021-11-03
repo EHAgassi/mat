@@ -46,21 +46,22 @@ int isPalindrome(int num)
     {
         return 0;
     }
-    num-= ((int)(firstCh*pow(10, nDigit-1)));
-    num%=10;
+    num -= ((int)firstCh)*pow(10.0, nDigit-1.0);
+    num-= num%10;
+    num/=10;
     return isPalindrome(num);
 }
 
 // int main()
-// {
-//   for(int i = 0; i<1000;i++){
-//     if (isPalindrom(i))
-//     {
-//       /* code */
-//     }
-    
-//   }
-//     int a = isPalindrme();
+// {int a,b=4564;
+// //   for(int i = 0; i<1000;i++){
+// //     if (isPalindrom(i))
+// //     {
+// //       /* code */
+// //     }    
+// //   }
+
+// a = isPalindrome(b);
 //     printf("%d\n", a);
 //     return 0;
 // }
