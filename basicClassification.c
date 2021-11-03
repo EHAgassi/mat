@@ -1,45 +1,40 @@
 #include <stdio.h>
-#include <math.h>
 #include "NumClass.h"
-#define FALSE 0;
-#define TRUE 1;
 
-int factorial(int n);
+// int main()
+// {
+//     int num = 0;
+//     scanf("%d", &num);
+//     printf("%d" ,isPrime(num));
+// }
 
-
-int isPrime(int num){
-int i;
- for (i = 2; i<num;i++)
+int isPrime(int num)
+{
+    for (int i=2; i<num ; i++)
     {
-        if (num%i==0)
+        if(num%i==0)
         {
-        return FALSE;
+            return 0;
         }
     }
-        return TRUE;  
+   return 1;
 }
 
-int isStrong(int x){
-    int tmpNum, rmndr,sum;
-    tmpNum = x;
-
-    while (tmpNum !=0)
+int isStrong(int num)
+{
+    int sum=0;
+    int temp = 1;
+    int num1= num;
+    do{
+    for(int i=1; i<=num%10;i++)
     {
-        rmndr =0;
-        rmndr = tmpNum%10;
-        sum += factorial((double)rmndr);
-        tmpNum /= 10;
+        temp*=i;
     }
-
-    if (sum == x)
-    {
-        return TRUE;
-    }
-    else return FALSE;
-    
-
-
+    num = num/10;
+    sum +=temp;
+    temp =1;
+    } while(num!=0);
+    if(sum==num1)
+    {return 1;}
+    else{return 0;}
 }
- int factorial(int n){
-    return (n == 1 || n == 0) ? 1 : factorial(n - 1) * n ;
- }
