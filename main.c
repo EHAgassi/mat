@@ -22,17 +22,6 @@ printf("The Armstrong numbers are:");
     } 
    
     
-printf("\nThe Prime numbers are:");
-        for(int i = num_a; i<=num_b; i++ )
-    {   
-       
-        if (isPrime(i)==1)
-        {
-           printf(" %d" ,i);
-        }
-        
-        
-    }
 
 printf("\nThe Palindromes are:");
         for(int i = num_a; i<=num_b; i++ )
@@ -44,6 +33,17 @@ printf("\nThe Palindromes are:");
     }
         
         
+printf("\nThe Prime numbers are:");
+        for(int i = num_a; i<=num_b; i++ )
+    {   
+       
+        if (isPrime(i)==1)
+        {
+           printf(" %d" ,i);
+        }
+        
+        
+    }
 printf("\nThe Strong numbers are:");
     for(int i = num_a; i<=num_b; i++ )
         {  
