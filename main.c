@@ -5,7 +5,6 @@
 
 int main(){
 int num_a,num_b;
-printf("the numbers");
 scanf("%d%d", &num_a, &num_b);
 
 

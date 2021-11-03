@@ -9,10 +9,10 @@ int isArmstrong(int num)
     double ndigit = numDigit(num);
     if(num==isArm(num, ndigit))
     {
-        return 0;
+        return 1;
 
     }
-    return 1;
+    return 0;
 }
 
 int isArm(int num, int p)
@@ -40,12 +40,12 @@ int isPalindrome(int num)
     int nDigit = numDigit(num); 
     if(nDigit==1 || nDigit==0)
     {
-        return 0;
+        return 1;
     }
     double firstCh = (num / pow(10 ,nDigit-1));
     if(num%10!= (int)firstCh)
     {
-        return 1;
+        return 0;
     }
     num-= ((int)(firstCh*pow(10, nDigit-1)));
     num%=10;
